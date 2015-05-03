@@ -1,0 +1,16 @@
+web: 
+  context: /
+  static: public
+  host: dorisdev.metarhythm.com
+ruby:
+  version: 1.9
+pooling: 
+  web: shared
+environment:
+  test: 
+    data_source: jdbc:postgresql://localhost/cms_test?user=meta
+  development: 
+    data_source: jdbc:postgresql://localhost/cms?user=meta
+  production: 
+    data_source: jdbc:postgresql://localhost/cms?user=meta
+
